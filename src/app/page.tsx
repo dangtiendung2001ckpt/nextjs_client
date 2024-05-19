@@ -15,6 +15,21 @@ export default function Home() {
        </div>*/}
 
         <Card></Card>
+        <h1 className="font-sans text-4xl font-normal text-center">
+            Xin chào mọi người
+        </h1>
+        <Image src='/images/image.jpg'
+               alt=''
+               width={500}
+               height={500}
+               quality={100}
+        />
+        <Image src='https://images.pexels.com/photos/10295057/pexels-photo-10295057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+               alt=''
+               width={500}
+               height={500}
+               quality={100}
+        />
     </main>
   );
 }
