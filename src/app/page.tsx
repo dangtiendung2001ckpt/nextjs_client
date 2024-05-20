@@ -2,8 +2,15 @@ import Image from "next/image";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import Card from "@/components/card";
+import ButtonRedirect from "@/app/components/ButtonRedirect";
+import {redirect} from "next/navigation";
 
+const isAuth = true
 export default function Home() {
+    if (!isAuth) {
+        redirect('/login')
+    }
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
        {/*<div className="flex-col">
@@ -13,7 +20,7 @@ export default function Home() {
            <Input type="text" />
            <h1>Check </h1>
        </div>*/}
-
+        <ButtonRedirect/>
         <Card></Card>
         <h1 className="font-sans text-4xl font-normal text-center">
             Xin chào mọi người
@@ -30,6 +37,7 @@ export default function Home() {
                height={500}
                quality={100}
         />
+
     </main>
   );
 }

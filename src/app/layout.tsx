@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
+import Link from "next/link";
 
 // const roboto = Roboto({ subsets: ["vietnamese"], weight: ['100', '300', '400', '500', '700', "900" ]});
 
@@ -38,7 +39,13 @@ export default function RootLayout({
   return (
     <html lang="en">
     {/*<body className={`${myFont.className} ${myFont.variable}`}>{children}</body>*/}
-    <body className={`${myFont.variable}`}>{children}</body>
+    <body className={`${myFont.variable}`}>
+    <Link href='/'>Home</Link>
+    <Link href='/login'>Login</Link>
+    <Link href='/register'>register</Link>
+    <header>header</header>
+    {children}
+    </body>
     </html>
   );
 }
